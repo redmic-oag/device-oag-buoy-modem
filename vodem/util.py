@@ -1,6 +1,7 @@
 import datetime
 import logging
 import re
+import binascii
 
 from .exceptions import DecodeError
 
@@ -64,7 +65,8 @@ def decode_sms_message(message):
 def encode_sms_message(message):
     logging.getLogger(__name__).debug(message)
     try:
-        return bytes.hex(message.encode('utf-16-be'))
+        return binascii.hexlify(message.encode('utf-16-be')).decode('ascii')
+#            bytes.hex(message.encode('utf-16-be'))
     except Exception as ex:
         raise DecodeError(ex)
 

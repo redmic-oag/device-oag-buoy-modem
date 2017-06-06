@@ -8,7 +8,7 @@ logging.basicConfig()
 
 
 class Connection(object):
-    BASE_URL = 'http://192.168.9.1'
+    BASE_URL = 'http://192.168.3.1'
 
     def __init__(self):
         self._session = requests.Session()
@@ -56,7 +56,7 @@ class Connection(object):
                 'Request Body: %s', prepared_request.body)
 
             response = self._session.send(
-                prepared_request, stream=True, timeout=(3.05, 120))
+                prepared_request, stream=True, timeout=120)
             response.raise_for_status()
 
             logging.getLogger(__name__).debug('Response %s', response.text)
