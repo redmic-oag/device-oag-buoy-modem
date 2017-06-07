@@ -56,7 +56,7 @@ class Connection(object):
                 'Request Body: %s', prepared_request.body)
 
             response = self._session.send(
-                prepared_request, stream=True, timeout=120)
+                prepared_request, stream=True, timeout=1)
             response.raise_for_status()
 
             logging.getLogger(__name__).debug('Response %s', response.text)
