@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+* Añade CI
+* Ignora ficheros de pycharm
+* Disminiye timeout en las peticiones
+* Actualiza la IP y corrige bug para python3
+
 0.3.0
 -----
 
