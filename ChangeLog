@@ -1,6 +1,9 @@
 CHANGES
 =======
 
+* Disminiye timeout en las peticiones
+* Actualiza la IP y corrige bug para python3
+
 0.3.0
 -----
 
